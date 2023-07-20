@@ -1,0 +1,190 @@
+@use "../../../library/sass/variables" as var;
+
+.hero {
+  background-image: url("../../../assets/imags/hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  min-height: calc(100vh - 68px);
+
+  h1 {
+    max-width: 32.75rem;
+    color: var.$neutral_800;
+
+    /* Heading/1 */
+    font-family: Work Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .featureBj {
+    border-radius: 0.125rem 0.125rem 0rem 0rem;
+    background: var.$primary;
+
+    width: 26rem;
+    height: 9.375rem;
+    padding: 1.25rem 0.625rem 0.625rem 0.625rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    p {
+      font-style: normal;
+      line-height: normal;
+      color: #fff;
+      font-family: Work Sans;
+
+      &:first-child {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      &:last-child {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    }
+
+    button {
+      background: var.$neutral_800;
+      height: 2.5rem;
+      padding: 0.25rem 1.25rem;
+
+      &:first-child {
+        width: 13rem;
+
+        gap: 0.625rem;
+        flex-shrink: 0;
+      }
+
+      &:last-child {
+        width: 12.9375rem;
+
+        gap: 0.625rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .button_box button {
+    color: white;
+  }
+}
+
+// end hero
+
+.reasons {
+  color: var.$neutral_800;
+
+  h2 {
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .box {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+
+    div {
+      flex-direction: column;
+      row-gap: 1.12rem;
+      width: 18.25rem;
+      border-radius: 0.25rem;
+      border: 1.4px solid var.$neutral_100;
+      background: #fff;
+
+      fa-icon {
+        font-size: 1.8rem;
+        color: var.$secondary;
+      }
+
+      h3 {
+        color: var.$neutral_700;
+        font-family: Work Sans;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      p {
+        color: var.$neutral_400;
+
+        font-family: Work Sans;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.about_us {
+  img {
+    width: 56.375rem;
+    max-width: 100%;
+    height: 41.8125rem;
+    object-fit: contain;
+  }
+
+  section {
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 30.5rem;
+    height: 32.6875rem;
+    border-radius: 0.125rem;
+    background: var.$primary;
+    box-shadow: 0px 8px 8px -4px rgba(17, 24, 39, 0.04),
+      0px 20px 24px -4px rgba(17, 24, 39, 0.1);
+    top: 50%;
+    right: unset;
+    transform: translateY(-50%);
+    color: white;
+
+    h2 {
+      font-family: Work Sans;
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    p {
+      font-family: Work Sans;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    a {
+      border-radius: 0.375rem;
+      border: 2px solid var.$primary;
+      background: white;
+      width: fit-content;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+
+  .about_us {
+    section {
+      right: 0;
+    }
+  }
+}

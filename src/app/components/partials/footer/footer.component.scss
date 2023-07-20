@@ -1,0 +1,53 @@
+@use "../../../../library/sass/variables" as var;
+
+footer {
+  .info {
+    span {
+      color: var.$primary;
+    }
+  }
+
+  .copyright {
+    background-color: var.$primary;
+  }
+
+  .navbar-brand {
+    color: var.$primary;
+  }
+
+  .news-icon {
+    p {
+      color: var.$primary;
+    }
+  }
+
+  form div {
+    column-gap: 5px;
+
+    button {
+      background-color: var.$secondary;
+      color: white;
+    }
+  }
+
+  .icons a {
+    width: fit-content;
+    height: fit-content;
+
+    fa-icon {
+      font-size: 2rem;
+      color: var.$neutral_700;
+      transition: color 0.5s ease-in-out;
+    }
+
+    &:first-of-type fa-icon:hover {
+      color: #3b5998;
+    }
+    &:nth-child(2) fa-icon:hover {
+      color: #007bb5;
+    }
+    &:last-of-type fa-icon:hover {
+      color: #55acee;
+    }
+  }
+}
